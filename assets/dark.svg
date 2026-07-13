@@ -1,0 +1,305 @@
+<svg width="1180" height="610" viewBox="0 0 1180 610" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <style>
+      .mono { font-family: 'JetBrains Mono','Fira Code','SFMono-Regular',Consolas,monospace; }
+    </style>
+
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="100%" stop-color="#060B1A"/>
+    </linearGradient>
+
+    <linearGradient id="shimmerGrad" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F89820"/>
+      <stop offset="33%" stop-color="#6DB33F"/>
+      <stop offset="66%" stop-color="#4285F4"/>
+      <stop offset="100%" stop-color="#F89820"/>
+      <animateTransform attributeName="gradientTransform" type="rotate" from="0 0.5 0.5" to="360 0.5 0.5" dur="7s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="frameGrad" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F89820"/>
+      <stop offset="50%" stop-color="#6DB33F"/>
+      <stop offset="100%" stop-color="#4285F4"/>
+      <animateTransform attributeName="gradientTransform" type="rotate" from="0 0.5 0.5" to="360 0.5 0.5" dur="9s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="glassGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F8FAFC" stop-opacity="0.10"/>
+      <stop offset="12%" stop-color="#F8FAFC" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#F8FAFC" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <radialGradient id="blobJava" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F89820" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#F89820" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobSpring" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6DB33F" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#6DB33F" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobGoogle" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4285F4" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#4285F4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="particleGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F8FAFC" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#F8FAFC" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="strongBlur" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="55"/>
+    </filter>
+    <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="pillGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+
+    <clipPath id="cardClip">
+      <rect x="3" y="3" width="1174" height="604" rx="28"/>
+    </clipPath>
+
+    <pattern id="scanlines" width="1180" height="4" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="1180" height="1" fill="#F8FAFC" fill-opacity="0.035"/>
+      <animateTransform attributeName="patternTransform" type="translate" from="0 0" to="0 4" dur="0.35s" repeatCount="indefinite"/>
+    </pattern>
+
+    <pattern id="codeTexture" width="70" height="46" patternUnits="userSpaceOnUse" patternTransform="rotate(-6)">
+      <text x="0" y="14" class="mono" font-size="12" fill="#F89820" fill-opacity="0.75">01</text>
+      <text x="34" y="14" class="mono" font-size="12" fill="#6DB33F" fill-opacity="0.7">&lt;/&gt;</text>
+      <text x="2" y="32" class="mono" font-size="12" fill="#4285F4" fill-opacity="0.75">{ }</text>
+      <text x="40" y="32" class="mono" font-size="12" fill="#F8FAFC" fill-opacity="0.55">::</text>
+      <text x="16" y="44" class="mono" font-size="11" fill="#F89820" fill-opacity="0.5">fn</text>
+    </pattern>
+
+    <clipPath id="bustClip">
+      <circle cx="230" cy="228" r="86"/>
+      <path d="M 108 560 C 108 420 150 366 230 366 C 310 366 352 420 352 560 Z"/>
+      <rect x="98" y="540" width="264" height="40"/>
+    </clipPath>
+
+    <clipPath id="portraitRevealClip">
+      <rect x="90" y="130" width="280" height="0">
+        <animate attributeName="height" from="0" to="460" dur="1.6s" begin="0.2s" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1"/>
+      </rect>
+    </clipPath>
+
+    <clipPath id="line1clip"><rect x="0" y="0" width="0" height="26"><animate attributeName="width" from="0" to="230" dur="0.5s" begin="0.4s" fill="freeze"/></rect></clipPath>
+    <clipPath id="line2clip"><rect x="0" y="0" width="0" height="26"><animate attributeName="width" from="0" to="430" dur="0.6s" begin="1.0s" fill="freeze"/></rect></clipPath>
+    <clipPath id="line3clip"><rect x="0" y="0" width="0" height="26"><animate attributeName="width" from="0" to="420" dur="0.5s" begin="1.7s" fill="freeze"/></rect></clipPath>
+    <clipPath id="line4clip"><rect x="0" y="0" width="0" height="26"><animate attributeName="width" from="0" to="260" dur="0.5s" begin="2.3s" fill="freeze"/></rect></clipPath>
+    <clipPath id="line5clip"><rect x="0" y="0" width="0" height="26"><animate attributeName="width" from="0" to="360" dur="0.5s" begin="2.8s" fill="freeze"/></rect></clipPath>
+    <clipPath id="line6clip"><rect x="0" y="0" width="0" height="26"><animate attributeName="width" from="0" to="240" dur="0.4s" begin="3.4s" fill="freeze"/></rect></clipPath>
+    <clipPath id="line7clip"><rect x="0" y="0" width="0" height="26"><animate attributeName="width" from="0" to="320" dur="0.4s" begin="3.8s" fill="freeze"/></rect></clipPath>
+    <clipPath id="line8clip"><rect x="0" y="0" width="0" height="26"><animate attributeName="width" from="0" to="300" dur="0.4s" begin="4.15s" fill="freeze"/></rect></clipPath>
+    <clipPath id="line9clip"><rect x="0" y="0" width="0" height="26"><animate attributeName="width" from="0" to="280" dur="0.4s" begin="4.5s" fill="freeze"/></rect></clipPath>
+    <clipPath id="line10clip"><rect x="0" y="0" width="0" height="26"><animate attributeName="width" from="0" to="300" dur="0.4s" begin="4.85s" fill="freeze"/></rect></clipPath>
+    <clipPath id="line11clip"><rect x="0" y="0" width="0" height="26"><animate attributeName="width" from="0" to="260" dur="0.4s" begin="5.2s" fill="freeze"/></rect></clipPath>
+    <clipPath id="line12clip"><rect x="0" y="0" width="0" height="26"><animate attributeName="width" from="0" to="360" dur="0.4s" begin="6.4s" fill="freeze"/></rect></clipPath>
+    <clipPath id="line13clip"><rect x="0" y="0" width="0" height="26"><animate attributeName="width" from="0" to="420" dur="0.5s" begin="6.9s" fill="freeze"/></rect></clipPath>
+  </defs>
+
+  <rect x="0" y="0" width="1180" height="610" rx="28" fill="url(#bgGrad)"/>
+
+  <g clip-path="url(#cardClip)">
+    <circle cx="150" cy="120" r="220" fill="url(#blobJava)" filter="url(#strongBlur)">
+      <animate attributeName="cx" values="150;230;150" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="120;180;120" dur="19s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="980" cy="480" r="240" fill="url(#blobGoogle)" filter="url(#strongBlur)">
+      <animate attributeName="cx" values="980;900;980" dur="18s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="480;420;480" dur="15s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="80" r="180" fill="url(#blobSpring)" filter="url(#strongBlur)">
+      <animate attributeName="cx" values="700;620;700" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="80;140;80" dur="17s" repeatCount="indefinite"/>
+    </circle>
+
+    <g opacity="0.9">
+      <circle cx="90" cy="500" r="2.4" fill="url(#particleGlow)"><animateMotion path="M0,0 q14,-26 0,-52 q-14,26 0,52 z" dur="7s" repeatCount="indefinite"/></circle>
+      <circle cx="430" cy="90" r="2" fill="url(#particleGlow)"><animateMotion path="M0,0 q-18,20 0,40 q18,-20 0,-40 z" dur="9s" repeatCount="indefinite"/></circle>
+      <circle cx="1080" cy="140" r="2.6" fill="url(#particleGlow)"><animateMotion path="M0,0 q16,24 0,48 q-16,-24 0,-48 z" dur="8s" repeatCount="indefinite"/></circle>
+      <circle cx="1000" cy="560" r="2.1" fill="url(#particleGlow)"><animateMotion path="M0,0 q-20,-18 0,-36 q20,18 0,36 z" dur="10s" repeatCount="indefinite"/></circle>
+      <circle cx="600" cy="580" r="2.3" fill="url(#particleGlow)"><animateMotion path="M0,0 q12,-22 0,-44 q-12,22 0,44 z" dur="6.5s" repeatCount="indefinite"/></circle>
+      <circle cx="55" cy="250" r="1.8" fill="url(#particleGlow)"><animateMotion path="M0,0 q-14,18 0,36 q14,-18 0,-36 z" dur="11s" repeatCount="indefinite"/></circle>
+      <circle cx="1140" cy="380" r="2.2" fill="url(#particleGlow)"><animateMotion path="M0,0 q18,16 0,32 q-18,-16 0,-32 z" dur="7.5s" repeatCount="indefinite"/></circle>
+      <circle cx="380" cy="580" r="1.9" fill="url(#particleGlow)"><animateMotion path="M0,0 q-12,-20 0,-40 q12,20 0,40 z" dur="9.5s" repeatCount="indefinite"/></circle>
+    </g>
+
+    <rect x="0" y="0" width="1180" height="610" fill="url(#scanlines)" opacity="0.5"/>
+
+    <!-- LEFT: cyber portrait frame -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -9; 0 0; 0 9; 0 0" dur="7s" repeatCount="indefinite"/>
+
+      <rect x="40" y="40" width="380" height="535" rx="24" fill="none" stroke="url(#frameGrad)" stroke-width="6" filter="url(#softBlur)" opacity="0.55"/>
+      <rect x="40" y="40" width="380" height="535" rx="24" fill="#020617" fill-opacity="0.35" stroke="url(#frameGrad)" stroke-width="1.6"/>
+
+      <g clip-path="url(#portraitRevealClip)">
+        <rect x="90" y="130" width="280" height="460" fill="url(#codeTexture)" clip-path="url(#bustClip)"/>
+        <g clip-path="url(#bustClip)" filter="url(#softGlow)">
+          <rect x="90" y="130" width="280" height="460" fill="none" stroke="url(#frameGrad)" stroke-width="1"/>
+        </g>
+        <circle cx="230" cy="228" r="86" fill="none" stroke="url(#frameGrad)" stroke-width="1.6" filter="url(#softGlow)"/>
+        <path d="M 108 560 C 108 420 150 366 230 366 C 310 366 352 420 352 560" fill="none" stroke="url(#frameGrad)" stroke-width="1.6" filter="url(#softGlow)"/>
+      </g>
+
+      <text x="230" y="628" text-anchor="middle" class="mono" font-size="13" fill="#F8FAFC" fill-opacity="0.55" letter-spacing="3">CYBER::PORTRAIT.exe</text>
+    </g>
+
+    <!-- RIGHT: glass terminal -->
+    <g>
+      <rect x="460" y="40" width="680" height="535" rx="20" fill="url(#glassGrad)"/>
+      <rect x="460" y="40" width="680" height="535" rx="20" fill="none" stroke="url(#shimmerGrad)" stroke-width="1.4"/>
+      <ellipse cx="720" cy="70" rx="260" ry="40" fill="#F8FAFC" fill-opacity="0.06" filter="url(#softBlur)"/>
+
+      <rect x="460" y="40" width="680" height="40" rx="20" fill="#F8FAFC" fill-opacity="0.03"/>
+      <rect x="460" y="60" width="680" height="20" fill="#F8FAFC" fill-opacity="0.03"/>
+      <circle cx="484" cy="60" r="6" fill="#FF5F56"/>
+      <circle cx="504" cy="60" r="6" fill="#FFBD2E"/>
+      <circle cx="524" cy="60" r="6" fill="#27C93F"/>
+      <text x="548" y="65" class="mono" font-size="13" fill="#F8FAFC" fill-opacity="0.55">pritam@dhoke: ~/profile</text>
+      <line x1="460" y1="80" x2="1140" y2="80" stroke="#F8FAFC" stroke-opacity="0.08"/>
+
+      <g class="mono" font-size="15" fill="#F8FAFC">
+        <g clip-path="url(#line1clip)"><text x="484" y="108" fill="#6DB33F">$ whoami</text></g>
+        <g clip-path="url(#line2clip)"><text x="484" y="136" font-size="17" font-weight="600">Hi, I'm Pritam Dhoke 👋</text></g>
+
+        <g clip-path="url(#line3clip)">
+          <text x="484" y="166" fill="#F89820">&gt; Senior Software Engineer
+            <animate attributeName="opacity" values="0;1;1;0;0;0" keyTimes="0;0.02;0.23;0.25;0.99;1" dur="32s" begin="0s" repeatCount="indefinite"/>
+          </text>
+        </g>
+        <text x="484" y="166" fill="#F89820" opacity="0">&gt; Java Backend Engineer
+          <animate attributeName="opacity" values="0;1;1;0;0;0" keyTimes="0;0.02;0.23;0.25;0.99;1" dur="32s" begin="8s" repeatCount="indefinite"/>
+        </text>
+        <text x="484" y="166" fill="#F89820" opacity="0">&gt; Cloud Data Engineer
+          <animate attributeName="opacity" values="0;1;1;0;0;0" keyTimes="0;0.02;0.23;0.25;0.99;1" dur="32s" begin="16s" repeatCount="indefinite"/>
+        </text>
+        <text x="484" y="166" fill="#F89820" opacity="0">&gt; Spring Boot Specialist
+          <animate attributeName="opacity" values="0;1;1;0;0;0" keyTimes="0;0.02;0.23;0.25;0.99;1" dur="32s" begin="24s" repeatCount="indefinite"/>
+        </text>
+
+        <g clip-path="url(#line4clip)"><text x="484" y="202" fill-opacity="0.8">📍 Pune, India</text></g>
+        <g clip-path="url(#line5clip)"><text x="484" y="226" fill-opacity="0.8">💼 Senior Analyst @ Accenture</text></g>
+
+        <g clip-path="url(#line6clip)"><text x="484" y="260" fill="#6DB33F">$ cat focus.txt</text></g>
+        <g clip-path="url(#line7clip)"><text x="484" y="284" fill-opacity="0.75">- Scalable Java Microservices</text></g>
+        <g clip-path="url(#line8clip)"><text x="484" y="306" fill-opacity="0.75">- Cloud Data Platforms</text></g>
+        <g clip-path="url(#line9clip)"><text x="484" y="328" fill-opacity="0.75">- Distributed Systems</text></g>
+        <g clip-path="url(#line10clip)"><text x="484" y="350" fill-opacity="0.75">- Backend Performance</text></g>
+
+        <g clip-path="url(#line11clip)"><text x="484" y="384" fill="#6DB33F">$ skills --list</text></g>
+      </g>
+
+      <!-- Skill pills -->
+      <g class="mono" font-size="12" font-weight="500">
+        <!-- Row 1 -->
+        <g>
+          <rect x="484" y="396" width="46" height="28" rx="14" fill="#F89820" fill-opacity="0.14" stroke="#F89820" stroke-width="1" filter="url(#pillGlow)"/>
+          <rect x="484" y="396" width="46" height="28" rx="14" fill="none" stroke="#F89820" stroke-width="1"/>
+          <text x="507" y="414" text-anchor="middle" fill="#F89820">Java</text>
+        </g>
+        <g>
+          <rect x="542" y="396" width="96" height="28" rx="14" fill="#6DB33F" fill-opacity="0.14" stroke="#6DB33F" stroke-width="1" filter="url(#pillGlow)"/>
+          <rect x="542" y="396" width="96" height="28" rx="14" fill="none" stroke="#6DB33F" stroke-width="1"/>
+          <text x="590" y="414" text-anchor="middle" fill="#6DB33F">Spring Boot</text>
+        </g>
+        <g>
+          <rect x="650" y="396" width="112" height="28" rx="14" fill="#4285F4" fill-opacity="0.14" stroke="#4285F4" stroke-width="1" filter="url(#pillGlow)"/>
+          <rect x="650" y="396" width="112" height="28" rx="14" fill="none" stroke="#4285F4" stroke-width="1"/>
+          <text x="706" y="414" text-anchor="middle" fill="#4285F4">Microservices</text>
+        </g>
+        <g>
+          <rect x="774" y="396" width="86" height="28" rx="14" fill="#F8FAFC" fill-opacity="0.10" stroke="#F8FAFC" stroke-width="1" filter="url(#pillGlow)"/>
+          <rect x="774" y="396" width="86" height="28" rx="14" fill="none" stroke="#F8FAFC" stroke-opacity="0.7" stroke-width="1"/>
+          <text x="817" y="414" text-anchor="middle" fill="#F8FAFC">Hibernate</text>
+        </g>
+        <g>
+          <rect x="872" y="396" width="46" height="28" rx="14" fill="#F89820" fill-opacity="0.14" stroke="#F89820" stroke-width="1" filter="url(#pillGlow)"/>
+          <rect x="872" y="396" width="46" height="28" rx="14" fill="none" stroke="#F89820" stroke-width="1"/>
+          <text x="895" y="414" text-anchor="middle" fill="#F89820">SQL</text>
+        </g>
+
+        <!-- Row 2 -->
+        <g>
+          <rect x="484" y="438" width="50" height="28" rx="14" fill="#4285F4" fill-opacity="0.14" stroke="#4285F4" stroke-width="1" filter="url(#pillGlow)"/>
+          <rect x="484" y="438" width="50" height="28" rx="14" fill="none" stroke="#4285F4" stroke-width="1"/>
+          <text x="509" y="456" text-anchor="middle" fill="#4285F4">GCP</text>
+        </g>
+        <g>
+          <rect x="546" y="438" width="82" height="28" rx="14" fill="#4285F4" fill-opacity="0.14" stroke="#4285F4" stroke-width="1" filter="url(#pillGlow)"/>
+          <rect x="546" y="438" width="82" height="28" rx="14" fill="none" stroke="#4285F4" stroke-width="1"/>
+          <text x="587" y="456" text-anchor="middle" fill="#4285F4">BigQuery</text>
+        </g>
+        <g>
+          <rect x="640" y="438" width="118" height="28" rx="14" fill="#4285F4" fill-opacity="0.14" stroke="#4285F4" stroke-width="1" filter="url(#pillGlow)"/>
+          <rect x="640" y="438" width="118" height="28" rx="14" fill="none" stroke="#4285F4" stroke-width="1"/>
+          <text x="699" y="456" text-anchor="middle" fill="#4285F4">Cloud Spanner</text>
+        </g>
+        <g>
+          <rect x="770" y="438" width="70" height="28" rx="14" fill="#6DB33F" fill-opacity="0.14" stroke="#6DB33F" stroke-width="1" filter="url(#pillGlow)"/>
+          <rect x="770" y="438" width="70" height="28" rx="14" fill="none" stroke="#6DB33F" stroke-width="1"/>
+          <text x="805" y="456" text-anchor="middle" fill="#6DB33F">Pub/Sub</text>
+        </g>
+        <g>
+          <rect x="852" y="438" width="82" height="28" rx="14" fill="#F89820" fill-opacity="0.14" stroke="#F89820" stroke-width="1" filter="url(#pillGlow)"/>
+          <rect x="852" y="438" width="82" height="28" rx="14" fill="none" stroke="#F89820" stroke-width="1"/>
+          <text x="893" y="456" text-anchor="middle" fill="#F89820">Dataflow</text>
+        </g>
+
+        <!-- Row 3 -->
+        <g>
+          <rect x="484" y="480" width="62" height="28" rx="14" fill="#4285F4" fill-opacity="0.14" stroke="#4285F4" stroke-width="1" filter="url(#pillGlow)"/>
+          <rect x="484" y="480" width="62" height="28" rx="14" fill="none" stroke="#4285F4" stroke-width="1"/>
+          <text x="515" y="498" text-anchor="middle" fill="#4285F4">Docker</text>
+        </g>
+        <g>
+          <rect x="558" y="480" width="94" height="28" rx="14" fill="#4285F4" fill-opacity="0.14" stroke="#4285F4" stroke-width="1" filter="url(#pillGlow)"/>
+          <rect x="558" y="480" width="94" height="28" rx="14" fill="none" stroke="#4285F4" stroke-width="1"/>
+          <text x="605" y="498" text-anchor="middle" fill="#4285F4">Kubernetes</text>
+        </g>
+        <g>
+          <rect x="664" y="480" width="130" height="28" rx="14" fill="#F8FAFC" fill-opacity="0.10" stroke="#F8FAFC" stroke-width="1" filter="url(#pillGlow)"/>
+          <rect x="664" y="480" width="130" height="28" rx="14" fill="none" stroke="#F8FAFC" stroke-opacity="0.7" stroke-width="1"/>
+          <text x="729" y="498" text-anchor="middle" fill="#F8FAFC">GitHub Actions</text>
+        </g>
+        <g>
+          <rect x="806" y="480" width="70" height="28" rx="14" fill="#6DB33F" fill-opacity="0.14" stroke="#6DB33F" stroke-width="1" filter="url(#pillGlow)"/>
+          <rect x="806" y="480" width="70" height="28" rx="14" fill="none" stroke="#6DB33F" stroke-width="1"/>
+          <text x="841" y="498" text-anchor="middle" fill="#6DB33F">Jenkins</text>
+        </g>
+        <g>
+          <rect x="888" y="480" width="132" height="28" rx="14" fill="#F89820" fill-opacity="0.14" stroke="#F89820" stroke-width="1" filter="url(#pillGlow)"/>
+          <rect x="888" y="480" width="132" height="28" rx="14" fill="none" stroke="#F89820" stroke-width="1"/>
+          <text x="954" y="498" text-anchor="middle" fill="#F89820">OpenTelemetry</text>
+        </g>
+
+      </g>
+
+      <!-- Certification -->
+      <g class="mono" font-size="14">
+        <g clip-path="url(#line12clip)"><text x="484" y="540" fill="#6DB33F">$ ./certify.sh --provider aws</text></g>
+        <g clip-path="url(#line13clip)">
+          <text x="484" y="564" fill="#F8FAFC">
+            <tspan fill="#6DB33F">✔</tspan> AWS Certified Cloud Practitioner
+          </text>
+        </g>
+        <rect x="878" y="551" width="9" height="16" fill="#F8FAFC" opacity="0">
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.01;0.5;0.51" dur="1s" begin="7.4s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+    </g>
+  </g>
+
+  <rect x="4" y="4" width="1172" height="602" rx="26" fill="none" stroke="url(#shimmerGrad)" stroke-width="2"/>
+</svg>
